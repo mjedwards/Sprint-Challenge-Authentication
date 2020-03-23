@@ -9,8 +9,14 @@ function register(user) {
   return db("users").insert(user);
 }
 
+// function login(user) {
+//   return db("users")
+//     .where(user)
+//     .select("username, password");
+// }
+
 function login(user) {
   return db("users")
     .where(user)
-    .select("username, password");
+    .select("username", "password");
 }
